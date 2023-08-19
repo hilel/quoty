@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@qt/server/feature-quote": ["libs/server/feature-quote/src/index.ts"],
       "@qt/shared/domain": ["libs/shared/domain/src/index.ts"]
     }
   },
