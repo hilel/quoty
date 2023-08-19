@@ -25,9 +25,15 @@ export class ServerFeatureQuoteService {
         return quote;
     }
 
-    create(quote: IQuote): IQuote {
+    create(quote: Pick<IQuote, 'text'>): IQuote {
         const current = this.quotes$$.value;
-        this.quotes$$.next([...current, quote]);
-        return quote;
+        // Use the incoming data, a randomized ID, and a default values for some properties
+        const newQuote: IQuote = {
+            ...quote,
+            id: `qt-${Math.floor(Math.random() * 10000)}`,
+            authorId: 'Unknown Author'
+        } as IQuote;
+        this.quotes$$.next([...current, newQuote]);
+        return newQuote;
     }
 }

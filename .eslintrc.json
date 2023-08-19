@@ -15,6 +15,15 @@
               {
                 "sourceTag": "*",
                 "onlyDependOnLibsWithTags": ["*"]
+              },
+              // add these 2 entries below!
+              {
+                "sourceTag": "scope:server",
+                "onlyDependOnLibsWithTags": ["scope:server", "scope:shared"]
+              },
+              {
+                "sourceTag": "scope:client",
+                "onlyDependOnLibsWithTags": ["scope:client", "scope:shared"]
               }
             ]
           }
