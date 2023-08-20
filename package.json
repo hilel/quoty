@@ -4,6 +4,8 @@
   "license": "MIT",
   "scripts": {
     "start": "nx run-many --target=serve --projects=client,server",
+    "start:server": "nx serve server",
+    "start:client": "nx serve client",
     "lint": "nx run-many --target=lint --all",
     "story": "npx nx run client-ui-components:storybook",
     "build:render": "nx run-many --target=build --projects=client,server --configuration=render",
@@ -26,6 +28,7 @@
     "@nestjs/config": "^3.0.0",
     "@nestjs/core": "^10.0.2",
     "@nestjs/platform-express": "^10.0.2",
+    "@nestjs/swagger": "^7.1.8",
     "@nestjs/typeorm": "^10.0.0",
     "axios": "^1.0.0",
     "class-transformer": "^0.5.1",

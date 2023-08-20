@@ -6,8 +6,8 @@ export const QuoteEntitySchema = new EntitySchema<IQuote>({
   columns: {
     id: {
       type: 'uuid',
-      primary: true,
-      generated: true,
+      generated: 'uuid',
+      primary: true
     },
     text: {
       type: String,

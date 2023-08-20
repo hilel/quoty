@@ -1,25 +1,34 @@
 import { Body, Controller, Get, Param, Post } from '@nestjs/common';
+import { ApiOkResponse, ApiOperation } from '@nestjs/swagger';
 
 import { ServerFeatureQuoteService } from './server-feature-quote.service';
 import { IQuote } from '@qt/shared/domain';
-import { CreateQuoteDto } from './dtos/quote.dto';
+import { CreateQuoteDto, QuoteDto } from './dtos/quote.dto';
 
 @Controller('quotes')
 export class ServerFeatureQuoteController {
   constructor(private serverFeatureQuoteService: ServerFeatureQuoteService) {}
 
   @Get('')
-  getAll(): IQuote[] {
-    return this.serverFeatureQuoteService.getAll();
+  @ApiOkResponse({
+    type: QuoteDto,
+    isArray: true,
+  })
+  @ApiOperation({
+    summary: 'Returns all quotes',
+    tags: ['quotes'],
+  })
+  async getAll(): Promise<IQuote[]> {
+    return await this.serverFeatureQuoteService.getAll();
   }
 
   @Get(':id')
-  getOne(@Param('id') id: string): IQuote | undefined {
-    return this.serverFeatureQuoteService.getOne(id);
+  async getOne(@Param('id') id: string): Promise<IQuote> {
+    return await this.serverFeatureQuoteService.getOne(id);
   }
 
   @Post('')
-  create(@Body() data: CreateQuoteDto): IQuote {
-    return this.serverFeatureQuoteService.create(data);
+  async create(@Body() data: CreateQuoteDto): Promise<IQuote> {
+    return await this.serverFeatureQuoteService.create(data);
   }
 }
