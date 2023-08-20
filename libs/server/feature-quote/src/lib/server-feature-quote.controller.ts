@@ -2,6 +2,7 @@ import { Body, Controller, Get, Param, Post } from '@nestjs/common';
 
 import { ServerFeatureQuoteService } from './server-feature-quote.service';
 import { IQuote } from '@qt/shared/domain';
+import { CreateQuoteDto } from './dtos/quote.dto';
 
 @Controller('server-feature-quote')
 export class ServerFeatureQuoteController {
@@ -18,7 +19,7 @@ export class ServerFeatureQuoteController {
   }
 
   @Post('')
-  create(@Body() data: IQuote): IQuote {
+  create(@Body() data: CreateQuoteDto): IQuote {
     return this.serverFeatureQuoteService.create(data);
   }
 }

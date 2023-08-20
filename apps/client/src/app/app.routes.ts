@@ -1,3 +1,5 @@
 import { Route } from '@angular/router';
 
-export const appRoutes: Route[] = [];
+import { clientFeatureDashboardRoutes } from '@qt/client/feature-dashboard';
+
+export const appRoutes: Route[] = [...clientFeatureDashboardRoutes];

@@ -1,0 +1,33 @@
+<div class="dark:bg-gray-900 text-white">
+    <div class="container mx-auto py-10 px-4">
+      <!-- Quote 1 -->
+      <div class="quote fade-enter-active fade-enter-from mb-10">
+        <blockquote class="text-2xl italic leading-relaxed mb-4">
+          "The only way to do great work is to love what you do."
+        </blockquote>
+        <p class="text-xl text-gray-400 ml-4 fade-enter-active fade-enter-from delay-500">- Steve Jobs</p>
+      </div>
+      <!-- Quote 2 -->
+      <div class="quote fade-enter-active fade-enter-from mb-10">
+        <blockquote class="text-2xl italic leading-relaxed mb-4">
+          "The greatest glory in living lies not in never falling, but in rising every time we fall."
+        </blockquote>
+        <p class="text-xl text-gray-400 ml-4 fade-enter-active fade-enter-from delay-500">- Nelson Mandela</p>
+      </div>
+      <!-- Quote 3 -->
+      <div class="quote fade-enter-active fade-enter-from mb-10">
+        <blockquote class="text-2xl italic leading-relaxed mb-4">
+          "Life is what happens when you're busy making other plans."
+        </blockquote>
+        <p class="text-xl text-gray-400 ml-4 fade-enter-active fade-enter-from delay-500">- John Lennon</p>
+      </div>
+    </div>
+    <script>
+      document.querySelectorAll('.quote').forEach((quote, index) => {
+        setTimeout(() => {
+          quote.classList.remove('fade-enter-from');
+          quote.querySelector('.text-gray-400').classList.remove('fade-enter-from');
+        }, 2000 * index);
+      });
+    </script>
+</div>
