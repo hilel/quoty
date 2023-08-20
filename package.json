@@ -2,7 +2,16 @@
   "name": "@quoty/source",
   "version": "0.0.0",
   "license": "MIT",
-  "scripts": {},
+  "scripts": {
+    "start": "nx run-many --target=serve --projects=client,server",
+    "lint": "nx run-many --target=lint --all",
+    "story": "npx nx run client-ui-components:storybook",
+    "build:render": "nx run-many --target=build --projects=client,server --configuration=render",
+    "build:render:client": "nx run client:build:render",
+    "build:render:server": "nx run server:build:render",
+    "build:prod": "nx run-many --target=build --projects=client,server --configuration=render",
+    "graph": "npx nx graph"
+  },
   "private": true,
   "dependencies": {
     "@angular/animations": "~16.2.0",

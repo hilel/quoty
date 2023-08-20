@@ -4,7 +4,7 @@ import { ServerFeatureQuoteService } from './server-feature-quote.service';
 import { IQuote } from '@qt/shared/domain';
 import { CreateQuoteDto } from './dtos/quote.dto';
 
-@Controller('server-feature-quote')
+@Controller('quotes')
 export class ServerFeatureQuoteController {
   constructor(private serverFeatureQuoteService: ServerFeatureQuoteService) {}
 

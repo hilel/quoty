@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
+import { ApiService } from '@qt/client/data-access';
 
 @Component({
   selector: 'quoty-feature-dashboard',
@@ -8,4 +10,8 @@ import { CommonModule } from '@angular/common';
   templateUrl: './feature-dashboard.component.html',
   styleUrls: ['./feature-dashboard.component.scss'],
 })
-export class FeatureDashboardComponent {}
+export class FeatureDashboardComponent {
+  private readonly apiService = inject(ApiService);
+
+  quotes$ = this.apiService.getAllQuoteItems();
+}

@@ -36,8 +36,8 @@ function getMockQuotes() {
     return {
         "quotes": [
           {
-            "quoteId": '1',
-            "quoteText": "The only way to do great work is to love what you do.",
+            "id": '1',
+            "text": "The only way to do great work is to love what you do.",
             "authorId": '1',
             "author": {
               "authorId": '1',
@@ -51,8 +51,8 @@ function getMockQuotes() {
             "createdDate": "2023-08-18T00:00:00.000Z"
           },
           {
-            "quoteId": '2',
-            "quoteText": "The greatest glory in living lies not in never falling, but in rising every time we fall.",
+            "id": '2',
+            "text": "The greatest glory in living lies not in never falling, but in rising every time we fall.",
             "authorId": '2',
             "author": {
               "authorId": '2',
@@ -66,8 +66,8 @@ function getMockQuotes() {
             "createdDate": "2023-08-18T00:00:00.000Z"
           },
           {
-            "quoteId": '3',
-            "quoteText": "Life is what happens when you're busy making other plans.",
+            "id": '3',
+            "text": "Life is what happens when you're busy making other plans.",
             "authorId": '3',
             "author": {
               "authorId": '3',
