@@ -19,6 +19,9 @@
       "@qt/client/feature-dashboard": [
         "libs/client/feature-dashboard/src/index.ts"
       ],
+      "@qt/server/data-access-quote": [
+        "libs/server/data-access-quote/src/index.ts"
+      ],
       "@qt/server/feature-quote": ["libs/server/feature-quote/src/index.ts"],
       "@qt/shared/domain": ["libs/shared/domain/src/index.ts"]
     }

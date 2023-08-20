@@ -3,7 +3,10 @@
   "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "sourceRoot": "libs/client/data-access/src",
   "prefix": "quoty",
-  "tags": [],
+  "tags": [
+    "scope:client",
+    "type:data-access"
+  ],
   "projectType": "library",
   "targets": {
     "test": {
