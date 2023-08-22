@@ -19,6 +19,7 @@
       "@qt/client/feature-dashboard": [
         "libs/client/feature-dashboard/src/index.ts"
       ],
+      "@qt/client/ui-components": ["libs/client/ui-components/src/index.ts"],
       "@qt/server/data-access-quote": [
         "libs/server/data-access-quote/src/index.ts"
       ],
