@@ -1,1 +1,36 @@
-<p>quote works!</p>
+<div class="quote" *ngIf="quote">
+    <div class="quote__header">
+      <button
+        class="btn btn--sm quote__completed"
+        
+        (click)="triggerToggleComplete()"
+      >
+      <!-- [class.quote__completed--true]="quote.completed" -->
+        <fa-stack>
+          <fa-icon [icon]="faCircleOutline" stackItemSize="2x"></fa-icon>
+          <fa-icon
+            [icon]="faCheck"
+            stackItemSize="1x"
+          ></fa-icon><!-- *ngIf="quote.completed" -->
+        </fa-stack>
+      </button>
+  
+      <h4 class="quote__title">{{ quote.text }}</h4>
+    </div>
+  
+    <div class="quote__body">
+      <!-- <p class="quote__description">{{ quote.description }}</p> -->
+    </div>
+  
+    <div class="quote__footer">
+      <div class="quote__actions">
+        <button class="btn btn--danger btn--sm" (click)="triggerDelete()">
+          <fa-icon [icon]="faTrashCan"></fa-icon>
+        </button>
+  
+        <button class="btn btn--primary btn--sm" (click)="triggerEdit()">
+          <fa-icon [icon]="faPencil"></fa-icon>
+        </button>
+      </div>
+    </div>
+  </div>
