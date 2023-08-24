@@ -6,6 +6,7 @@ import * as Joi from 'joi';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { ServerFeatureQuoteModule } from '@qt/server/feature-quote';
+import { ServerFeatureHealthModule } from '@qt/server/feature-health';
 
 @Module({
   imports: [
@@ -25,7 +26,8 @@ import { ServerFeatureQuoteModule } from '@qt/server/feature-quote';
       }),
       inject: [ConfigService],
     }),
-    ServerFeatureQuoteModule
+    ServerFeatureQuoteModule,
+    ServerFeatureHealthModule
   ],
   controllers: [AppController],
   providers: [AppService],
